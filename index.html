@@ -33,14 +33,13 @@
         name: 'JsHook Documents',
         repo: 'https://github.com/JsHookApp',
         notFoundPage: true,//在找不到指定页面时加载_404.md
-        loadSidebar: true,//加载自定义侧边栏_sidebar.md
+        loadSidebar: 'sidebar.md',//加载自定义侧边栏_sidebar.md
         subMaxLevel: 2,//生成目录的最大层级
-        loadNavbar: true,//加载自定义导航栏_navbar.md
+        loadNavbar: 'navbar.md',//加载自定义导航栏_navbar.md
         auto2top: true,//切换页面后是否自动跳转到页面顶部
-        coverpage: true,//启用封面页_coverpage.md
+        coverpage: 'coverpage.md',//启用封面页_coverpage.md
         themeColor: '#2C3E50',//替换主题色,
         homepage: 'README.md',//设置首页文件
-        coverpage: 'coverpage.md',
         search: {
             noData: {
                 '/': '没有找到结果'
