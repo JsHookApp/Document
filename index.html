@@ -1,38 +1,20 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <title>JsHook Documents</title>
+    <title>JsHook Document</title>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8">
     <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
     <meta name="referrer" content="never">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="//lib.baomitu.com/docsify/4.12.2/themes/vue.min.css" />
-    <style type="text/css">
-        ::-webkit-scrollbar {
-            width: 10px;
-            height: 10px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: rgba(136, 136, 136, 0.5);
-            border-radius: 10px;
-        }
-
-        ::selection {
-            color: #fff;
-            background: #2C3E50;
-            opacity: 0.1;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css" />
 </head>
-<body ondragstart="return false;" oncontextmenu="return false;">
+<body>
 <div id="app"></div>
 <script type="text/javascript">
     window.$docsify = {
-        name: 'JsHook Documents',
+        name: 'JsHook Document',
         repo: 'https://github.com/JsHookApp',
-        notFoundPage: true,//在找不到指定页面时加载_404.md
+        notFoundPage: '404.md',//在找不到指定页面时加载_404.md
         loadSidebar: 'sidebar.md',//加载自定义侧边栏_sidebar.md
         subMaxLevel: 2,//生成目录的最大层级
         loadNavbar: 'navbar.md',//加载自定义导航栏_navbar.md
@@ -59,12 +41,12 @@
         }
     };
 </script>
-<script type="text/javascript" src="//lib.baomitu.com/docsify/4.12.2/docsify.min.js"></script>
-<script type="text/javascript" src="//lib.baomitu.com/docsify-copy-code/2.1.1/docsify-copy-code.min.js"></script>
-<script type="text/javascript" src="//lib.baomitu.com/docsify/4.12.2/plugins/search.min.js"></script>
-<script type="text/javascript" src="//lib.baomitu.com/docsify/4.12.2/plugins/zoom-image.min.js"></script>
-<script type="text/javascript" src="//lib.baomitu.com/prism/1.27.0/components/prism-json.min.js"></script>
-<script type="text/javascript" src="//lib.baomitu.com/prism/1.27.0/components/prism-java.min.js"></script>
-<script type="text/javascript" src="//lib.baomitu.com/prism/1.27.0/components/prism-php.min.js"></script>
+<script type="text/javascript" src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+<script type="text/javascript" src="//unpkg.com/docsify-copy-code@2"></script>
+<script type="text/javascript" src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
+<script type="text/javascript" src="//unpkg.com/docsify/lib/plugins/zoom-image.min.js"></script>
+<script type="text/javascript" src="//unpkg.com/prismjs/components/prism-json.min.js"></script>
+<script type="text/javascript" src="//unpkg.com/prismjs/components/prism-java.min.js"></script>
+<script type="text/javascript" src="//unpkg.com/prismjs/components/prism-php.min.js"></script>
 </body>
 </html>
