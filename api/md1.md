@@ -2,6 +2,18 @@
 
 用于获取当前hook运行时相关基础信息
 
+## 获取静态变量值js语法区别
+
+例如调用`runtime.appInfo`你可以通过这个获取到`dataDir`私有路径，注意以下示例中`rhino`和`frida`的区别，多了`.value`，其他同理
+
+```js
+//rhino
+console.log(runtime.appInfo.dataDir);
+
+//frida
+console.log(runtime.appInfo.value.dataDir.value);
+```
+
 ## runtime.jsContent
 
 获取当前注入的脚本内容，注意，如果是加密脚本，获取的不会是解密后的文本
@@ -11,12 +23,6 @@
 ## runtime.appInfo
 
 `返回值`: ApplicationInfo
-
-你可以通过这个获取到`dataDir`私有路径
-
-```js
-console.log(runtime.appInfo.dataDir);
-```
 
 ## runtime.packageName
 
