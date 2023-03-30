@@ -1,4 +1,4 @@
-# JsHook Documents
+# JsHook Document
 
 用js实现hook 支持java层和native层
 
