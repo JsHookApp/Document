@@ -2,7 +2,7 @@
 
 常见的一些问题处理方案
 
-## 离线模式下文件在哪下载
+## jshook相关文件在哪下载
 
 在这里下载: [https://github.com/JsHookApp/Download](https://github.com/JsHookApp/Download)
 
