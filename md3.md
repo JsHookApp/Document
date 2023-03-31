@@ -25,7 +25,7 @@
 
 以下是常见的一个示例：
 
-```js
+```javascript
 XposedBridge.hookAllMethods(XposedHelpers.findClass("android.app.Application", runtime.classLoader), "onCreate", XC_MethodReplacement({
     replaceHookedMethod: function (param) {
         console.log('hook');
@@ -34,7 +34,7 @@ XposedBridge.hookAllMethods(XposedHelpers.findClass("android.app.Application", r
 }));
 ```
 
-```js
+```javascript
 XposedBridge.hookAllMethods(XposedHelpers.findClass("android.app.Application", runtime.classLoader), "onCreate", XC_MethodHook({
     beforeHookedMethod: function (param) {
         console.log('hook before');

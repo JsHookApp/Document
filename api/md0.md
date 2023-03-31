@@ -24,7 +24,7 @@
 
 示例：
 
-```js
+```javascript
 confirm('is ok?', {
     ok: function () {
         //...
@@ -53,7 +53,7 @@ confirm('is ok?', {
 
 示例：
 
-```js
+```javascript
 setTimeout(function () {
     //...
 }, 100);
@@ -77,7 +77,7 @@ setTimeout(function () {
 
 示例：
 
-```js
+```javascript
 setInterval(function () {
     //...
 }, 100);

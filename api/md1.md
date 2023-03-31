@@ -44,7 +44,7 @@
 
 `runtime.appInfo`和`runtime.classLoader`因为返回的是class，调用有语法区别，例如调用`runtime.appInfo`你可以通过这个获取到`dataDir`私有路径，注意以下示例中`rhino`和`frida`的区别，多了`.value`
 
-```js
+```javascript
 //rhino
 console.log(runtime.appInfo.dataDir);
 

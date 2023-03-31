@@ -14,8 +14,8 @@
 
 示例：
 
-```js
-http.get('https://www.baidu.com', {
+```javascript
+http.get('http://xxxxx.com', {
     'test': 1
 }, {
     success: function (result) {
@@ -41,8 +41,8 @@ http.get('https://www.baidu.com', {
 
 示例：
 
-```js
-http.post('https://www.baidu.com', {
+```javascript
+http.post('http://xxxxx.com', {
     'user': 'me'
 }, {
     'test': 1
