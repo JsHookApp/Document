@@ -12,6 +12,8 @@ jshook属于xp模块，一般情况下使用`lsposed`进行激活，[https://git
 
 另：如果你没有lsposed，也可以直接安装jshook的面具模块进行激活，jshook应用首页点击`安装magisk模块`前两个模块用于激活，同时，`支持与lsposed共存`
 
+**lsposed激活的情况下在jshook中启用hook服务后，需要在lsposed的模块作用域中也要勾选对应启用hook服务的应用**
+
 ## 真机免root环境激活
 
 如果你手机无法root，可以尝试使用`lspatch` [https://github.com/LSPosed/LSPatch](https://github.com/LSPosed/LSPatch)
