@@ -6,29 +6,47 @@
 
 * 快速入门
 
+    * [安装](md6)
+
+    * [常见问题](md7)
+
+* 自建仓库
+
+    * [说明](md2)
+
+* Rhino
+
+    * [快速入门](md5)
+
+    * [xposed](md3)
+
+* Frida
+
+    * [快速入门](md4)
+
 * API说明
 
-    * [global](api/md0.md)
+    * [global](api/md0)
 
-    * [runtime](api/md1.md)
+    * [runtime](api/md1)
 
-    * [app](api/md2.md)
+    * [app](api/md2)
 
-    * [base64](api/md3.md)
+    * [base64](api/md3)
 
-    * [console](api/md4.md)
+    * [console](api/md4)
 
-    * [crypto](api/md5.md)
+    * [crypto](api/md5)
 
-    * [device](api/md6.md)
+    * [device](api/md6)
 
-    * [file](api/md7.md)
+    * [file](api/md7)
 
-    * [http](api/md8.md)
+    * [http](api/md8)
 
-    * [json](api/md9.md)
+    * [json](api/md9)
 
-    * [modmenu](api/md10.md)
+    * [modmenu](api/md10)
 
-    * [storage](api/md11.md)
+    * [storage](api/md11)
     
