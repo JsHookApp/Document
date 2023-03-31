@@ -46,3 +46,120 @@ XposedBridge.hookAllMethods(XposedHelpers.findClass("android.app.Application", r
 ```
 
 从示例中我们可以看到，几乎和java的写法一致，只是进行了简化
+
+## XposedHelpers.findClass(className,classLoader)
+
+```javascript
+XposedHelpers.findClass('com.test.test',runtime.classLoader);
+```
+
+## XposedBridge.hookAllConstructors(hookClass,callback)
+
+```javascript
+XposedBridge.hookAllConstructors(XposedHelpers.findClass('com.test.test',runtime.classLoader),XC_MethodHook({
+    beforeHookedMethod: function (param) {
+        console.log('hook before');
+    },
+    afterHookedMethod: function (param) {
+        console.log('hook after');
+    }
+}));
+```
+
+## XposedHelpers.findAndHookConstructor(clazz,parameterTypesAndCallback)
+
+```javascript
+XposedHelpers.findAndHookConstructor(XposedHelpers.findClass('com.test.test',runtime.classLoader),'java.lang.String','java.lang.String',XC_MethodHook({
+    beforeHookedMethod: function (param) {
+        console.log('hook before');
+    },
+    afterHookedMethod: function (param) {
+        console.log('hook after');
+    }
+}));
+```
+
+## XposedHelpers.findAndHookConstructor(className,classLoader,parameterTypesAndCallback)
+
+```javascript
+XposedHelpers.findAndHookConstructor('com.test.test',runtime.classLoader,'java.lang.String','java.lang.String',XC_MethodHook({
+    beforeHookedMethod: function (param) {
+        console.log('hook before');
+    },
+    afterHookedMethod: function (param) {
+        console.log('hook after');
+    }
+}));
+```
+
+## XposedBridge.hookAllMethods(hookClass,methodName,callback)
+
+```javascript
+XposedBridge.hookAllMethods(XposedHelpers.findClass('com.test.test',runtime.classLoader),'method',XC_MethodHook({
+    beforeHookedMethod: function (param) {
+        console.log('hook before');
+    },
+    afterHookedMethod: function (param) {
+        console.log('hook after');
+    }
+}));
+```
+
+## XposedBridge.hookMethod(hookMethod,callback)
+
+```javascript
+XposedBridge.hookMethod(param.method,XC_MethodHook({
+    beforeHookedMethod: function (param) {
+        console.log('hook before');
+    },
+    afterHookedMethod: function (param) {
+        console.log('hook after');
+    }
+}));
+```
+
+## XposedHelpers.setStaticObjectField(clazz,fieldName,value)
+
+```javascript
+XposedHelpers.setStaticObjectField(XposedHelpers.findClass('com.test.test',runtime.classLoader),'name','test');
+```
+
+## XposedHelpers.setObjectField(obj,fieldName,value)
+
+```javascript
+XposedHelpers.setObjectField(param.thisObject,'name','test');
+```
+
+## XposedHelpers.getStaticObjectField(clazz,fieldName)
+
+```javascript
+XposedHelpers.getStaticObjectField(XposedHelpers.findClass('com.test.test',runtime.classLoader),'name');
+```
+
+## XposedHelpers.getObjectField(clazz,fieldName)
+
+```javascript
+XposedHelpers.getObjectField(param.thisObject,'name');
+```
+
+## XposedHelpers.callMethod(obj,methodName,args)
+
+```javascript
+XposedHelpers.callMethod(param.thisObject,'method','123','456');
+```
+
+## XposedHelpers.callStaticMethod(clazz,methodName,parameterTypes,args)
+
+```javascript
+XposedHelpers.callStaticMethod(XposedHelpers.findClass('com.test.test',runtime.classLoader),'method','123','456');
+```
+
+## XposedBridge.invokeOriginalMethod(method,thisObject,args)
+
+```javascript
+XposedBridge.invokeOriginalMethod(param.method,param.thisObject,param.args);
+```
+
+## ...
+
+更多同上精简的方式调用即可
