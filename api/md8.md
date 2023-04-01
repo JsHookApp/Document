@@ -16,7 +16,7 @@
 
 ```javascript
 http.get('http://xxxxx.com', {
-    'test': 1
+    'test': '1'
 }, {
     success: function (result) {
         console.log(result);
@@ -45,7 +45,7 @@ http.get('http://xxxxx.com', {
 http.post('http://xxxxx.com', {
     'user': 'me'
 }, {
-    'test': 1
+    'test': '1'
 }, {
     success: function (result) {
         console.log(result);
@@ -54,3 +54,20 @@ http.post('http://xxxxx.com', {
         console.log(err);
     }
 });
+
+//或者
+
+http.post('http://xxxxx.com', 'string content', {
+    'test': '1'
+}, {
+    success: function (result) {
+        console.log(result);
+    },
+    error: function (err) {
+        console.log(err);
+    }
+});
+
+## 注意事项
+
+headers中的key和value必须都是string类型
