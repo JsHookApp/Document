@@ -67,6 +67,7 @@ http.post('http://xxxxx.com', 'string content', {
         console.log(err);
     }
 });
+```
 
 ## 注意事项
 
