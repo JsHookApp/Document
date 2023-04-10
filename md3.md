@@ -163,3 +163,28 @@ XposedBridge.invokeOriginalMethod(param.method,param.thisObject,param.args);
 ## ...
 
 更多同上精简的方式调用即可
+
+## 如何hook加壳的应用
+
+以下是常用的示例，有一些企业壳做了特殊处理，可能不适用
+
+```javascript
+XposedBridge.hookAllMethods(XposedHelpers.findClass('android.app.ActivityThread', runtime.classLoader), 'performLaunchActivity', XC_MethodHook({
+    beforeHookedMethod: function (param) {
+        console.log('hook before');
+    },
+    afterHookedMethod: function (param) {
+        console.log('hook after');
+        var mInitialApplication = XposedHelpers.getObjectField(param.thisObject, 'mInitialApplication');
+        var classLoader = XposedHelpers.callMethod(mInitialApplication, 'getClassLoader');
+        XposedBridge.hookAllMethods(XposedHelpers.findClass('com.test.test', classLoader), 'test', XC_MethodHook({
+            beforeHookedMethod: function (param) {
+                console.log('hook before');
+            },
+            afterHookedMethod: function (param) {
+                console.log('hook after');
+            }
+        }));
+    }
+}));
+```
