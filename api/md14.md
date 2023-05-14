@@ -1,0 +1,68 @@
+# view
+
+视图层操作
+
+## view.findViewByText(text)
+
+查找当前activity所有包含字符的TextView
+
+`参数`:
+
+`text`: string
+
+`返回值`: List\<View\>
+
+示例：
+
+```javascript
+var time1 = setInterval(function () {
+    var view1 = view.findViewByText('Text');
+    if (view1.size() > 0) {
+        clearInterval(time1);
+        view1.get(0).setText('fuck');
+        var p = view.getPosition(view1.get(0));
+        keys.click(p.get(0), p.get(1));
+        setTimeout(function () {
+            keys.back();
+        }, 2000);
+    }
+}, 100);
+```
+
+## view.getPosition(view)
+
+获取view的位置
+
+`参数`:
+
+`view`: View
+
+`返回值`: List\<int\>
+
+## view.findViewPositionByText(text)
+
+通过查找所有包含字符的TextView的位置
+
+`参数`:
+
+`text`: string
+
+`返回值`: List\<List\<int\>\>
+
+## view.runOnUiThread(function)
+
+在ui线程中执行
+
+`参数`:
+
+`function`: function
+
+示例：
+
+```javascript
+view.runOnUiThread({
+    run: function () {
+        //...
+    }
+});
+```

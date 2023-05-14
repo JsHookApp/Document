@@ -1,0 +1,24 @@
+# dialog
+
+常用的对话框
+
+## dialog.input(title,callback,content)
+
+`参数`:
+
+`title`: string
+
+`callback`: function
+
+`content`: string
+
+示例：
+
+```javascript
+dialog.input('标题', {
+    ok: function (res) {
+        console.log(res);
+    },
+    cancel: function () { }
+}, '默认值');
+```

@@ -131,3 +131,13 @@
 截屏
 
 `返回值`: Bitmap
+
+## device.setClipboard(data)
+
+`参数`:
+
+`data`: string
+
+## device.getClipboard()
+
+`返回值`: string

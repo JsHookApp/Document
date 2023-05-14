@@ -53,4 +53,10 @@
     * [storage](api/md11)
 
     * [convert](api/md12)
+
+    * [dialog](api/md13)
+
+    * [view](api/md14)
+
+    * [keys](api/md15)
     
