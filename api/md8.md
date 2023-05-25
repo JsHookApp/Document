@@ -71,4 +71,4 @@ http.post('http://xxxxx.com', 'string content', {
 
 ## 注意事项
 
-headers中的key和value必须都是string类型
+headers中的key和value必须都是string类型，当data为object时为表单提交，header头部会加入content-type:application/x-www-form-urlencoded，如果提交content-type:application/json，需要确定data参数类型为string
