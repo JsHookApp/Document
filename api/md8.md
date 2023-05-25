@@ -57,8 +57,10 @@ http.post('http://xxxxx.com', {
 
 //或者
 
-http.post('http://xxxxx.com', 'string content', {
-    'test': '1'
+http.post('http://xxxxx.com', JSON.stringify({
+    'user': 'me'
+}), {
+    'content-type': 'application/json'
 }, {
     success: function (result) {
         console.log(result);
