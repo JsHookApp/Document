@@ -59,4 +59,8 @@
     * [view](api/md14)
 
     * [keys](api/md15)
+
+    * [colors](api/md16)
+
+    * [canvas](api/md17)
     
