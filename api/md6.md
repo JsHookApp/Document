@@ -64,7 +64,7 @@
 
 ## device.isEmulator()
 
-判断是否是平板
+判断是否是模拟器
 
 `返回值`: boolean
 
@@ -124,20 +124,24 @@
 
 ## device.screenShot(activity)
 
+截屏
+
 `参数`:
 
 `activity`: Activity
 
-截屏
-
 `返回值`: Bitmap
 
 ## device.setClipboard(data)
+
+设置剪贴板内容
 
 `参数`:
 
 `data`: string
 
 ## device.getClipboard()
+
+获取剪贴板内容
 
 `返回值`: string
