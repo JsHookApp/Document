@@ -112,7 +112,7 @@
 
 `data`: byte[]
 
-`返回值`: byte[]
+`返回值`: string
 
 ## crypto.sha1(data)
 
@@ -128,7 +128,7 @@
 
 `data`: byte[]
 
-`返回值`: byte[]
+`返回值`: string
 
 ## crypto.sha256(data)
 
@@ -144,4 +144,4 @@
 
 `data`: byte[]
 
-`返回值`: byte[]
+`返回值`: string
