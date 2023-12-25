@@ -49,7 +49,7 @@ confirm('is ok?', {
 
 `time`: int 毫秒
 
-`返回值`: string 事件标识
+`返回值`: int 事件标识
 
 示例：
 
@@ -63,7 +63,7 @@ setTimeout(function () {
 
 `参数`:
 
-`id`: string 事件标识
+`id`: int 事件标识
 
 ## setInterval(function,time)
 
@@ -73,7 +73,7 @@ setTimeout(function () {
 
 `time`: int 毫秒
 
-`返回值`: string 事件标识
+`返回值`: int 事件标识
 
 示例：
 
@@ -87,4 +87,4 @@ setInterval(function () {
 
 `参数`:
 
-`id`: string 事件标识
+`id`: int 事件标识
