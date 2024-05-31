@@ -2,12 +2,6 @@
 
 用于获取当前设备的基础信息
 
-## device.isDeviceRooted()
-
-判断设备是否 rooted
-
-`返回值`: boolean
-
 ## device.isAdbEnabled()
 
 判断设备 ADB 是否可用
@@ -62,12 +56,6 @@
 
 `返回值`: boolean
 
-## device.isEmulator()
-
-判断是否是模拟器
-
-`返回值`: boolean
-
 ## device.isDevelopmentSettingsEnabled()
 
 开发者选项是否打开
@@ -83,18 +71,6 @@
 ## device.getScreenHeight()
 
 获取屏幕的高度（单位：px）
-
-`返回值`: int
-
-## device.getAppScreenWidth()
-
-获取应用屏幕的宽度（单位：px）
-
-`返回值`: int
-
-## device.getAppScreenHeight()
-
-获取应用屏幕的高度（单位：px）
 
 `返回值`: int
 

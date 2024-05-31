@@ -16,12 +16,6 @@
 
     * [说明](md2)
 
-* Rhino
-
-    * [快速入门](md5)
-
-    * [xposed](md3)
-
 * Frida
 
     * [快速入门](md4)
@@ -36,7 +30,7 @@
 
     * [base64](api/md3)
 
-    * [console](api/md4)
+    * [media](api/md4)
 
     * [crypto](api/md5)
 
@@ -50,6 +44,10 @@
 
     * [modmenu](api/md10)
 
+    * [moddraw](api/md17)
+
+    * [kernel](api/md18)
+
     * [storage](api/md11)
 
     * [convert](api/md12)
@@ -61,6 +59,4 @@
     * [keys](api/md15)
 
     * [colors](api/md16)
-
-    * [canvas](api/md17)
     

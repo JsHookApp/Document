@@ -2,12 +2,6 @@
 
 用于获取当前hook应用的基本信息
 
-## app.isAppRoot()
-
-判断 App 是否有 root 权限
-
-`返回值`: boolean
-
 ## app.isAppSystem()
 
 判断 App 是否是系统应用

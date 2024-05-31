@@ -2,12 +2,6 @@
 
 用于获取当前hook运行时相关基础信息
 
-## runtime.jsContent
-
-获取当前注入的脚本内容，注意，如果是加密脚本，获取的不会是解密后的文本
-
-`返回值`: string
-
 ## runtime.appInfo
 
 `返回值`: ApplicationInfo
@@ -24,7 +18,9 @@
 
 `返回值`: ClassLoader
 
-## runtime.isFirstApplication
+## runtime.isKernel
+
+是否在内核模式中
 
 `返回值`: boolean
 
@@ -34,8 +30,14 @@
 
 `返回值`: int
 
-## runtime.coreType
+## runtime.modVersion
 
-获取当前注入的类型(1:rhino 2:frida)
+获取当前firamod的版本
+
+`返回值`: string
+
+## runtime.modVersionCode
+
+获取当前firamod的版本号
 
 `返回值`: int
