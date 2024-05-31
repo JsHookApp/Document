@@ -40,6 +40,8 @@
 
     * [http](api/md8)
 
+    * [curl](api/md19)
+
     * [json](api/md9)
 
     * [modmenu](api/md10)
