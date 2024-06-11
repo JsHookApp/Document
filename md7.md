@@ -16,16 +16,34 @@
 
 部分机型实时注入脚本会直接发生闪退情况，你可以先关闭hook服务，先启动应用，等待几秒后在开启hook服务会途中开始注入，在测试之前先取消勾选脚本，排除脚本原因
 
-## frida-server连接不上
+## frida-server如何连接
 
 jshook提供的frida-server默认端口号为`28042/28043`
 
 连接示例
 
 ```shell
+#端口转发
 adb forward tcp:28042 tcp:28042
-adb forward tcp:28043 tcp:28043
+
+#spawn
 frida -H 127.0.0.1:28042 -f com.android.xxx -l test.js
+#attach
+frida -H 127.0.0.1:28042 -n com.android.xxx -l test.js
+```
+
+## frida-gadget如何连接
+
+与frida-server一样更改了端口
+
+连接示例
+
+```shell
+#端口转发
+adb forward tcp:28042 tcp:28042
+
+#attach
+frida -H 127.0.0.1:28042 Gadget -l test.js
 ```
 
 ## 开启渲染掉激活
