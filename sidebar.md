@@ -50,6 +50,8 @@
 
     * [kernel](api/md18)
 
+    * [memory](api/md20)
+
     * [storage](api/md11)
 
     * [convert](api/md12)
