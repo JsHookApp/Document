@@ -1,117 +1,118 @@
-# 自建仓库
+# Self-built warehouse
 
-需要搭建属于自己的脚本仓库，只需要提供以下格式的json文件地址即可，仓库界面右上角菜单中配置地址，`字段不需要的可以为null或者删除该字段`
+If you need to build your own script warehouse, you only need to provide the json file address in the following format. Configure the address in the menu in the upper right corner of the warehouse interface. `Fields that are not needed can be null or deleted`
 
-## 列表格式
+## List format
 
-列表格式下仓库只显示脚本列表信息，不会显示仓库其他信息，如果需要更多的功能，请参考下方的完整格式
+In the list format, the warehouse only displays the script list information, and will not display other warehouse information. If you need more functions, please refer to the complete format below
 
 ```json
 [
-    {
-        "author": "",
-        "markdown": "",
-        "ctime": "",
-        "source": "",
-        "id": "",
-        "title": "",
-        "type": "",
-        "version": "",
-        "url": "",
-        "desc": "",
-        "down_count": 0
-    }
+{
+"author": "",
+"markdown": "",
+"ctime": "",
+"source": "",
+"id": "",
+"title": "",
+"type": "",
+"version": "",
+"url": "",
+"desc": "",
+"down_count": 0
+}
 ]
 ```
 
-字段说明：
+Field description:
 
-`author`: string 显示脚本作者名称
+`author`: string Displays the name of the script author
 
-`markdown`: string 详细说明markdown文件url地址
+`markdown`: string Detailed description of the markdown file url address
 
-`ctime`: string 脚本创建时间，格式为：0000-00-00
+`ctime`: string Script creation time, format: 0000-00-00
 
-`source`: string 脚本来源url地址，比如脚本的开源github地址，非脚本的下载地址
+`source`: string Script source URL address, such as the script's open source github address, non-script download address
 
-`id`: string 脚本唯一标识，可以用uuid
+`id`: string Script unique identifier, can use uuid
 
-`title`: string 脚本名称
+`title`: string Script name
 
-`type`: string 两个值 rhino 或者 frida 告诉用户这是什么脚本
+`type`: string Two values ​​rhino or frida Tell the user what script this is
 
-`version`: string 版本号 例如 1.0.0
+`version`: string Version number For example 1.0.0
 
-`url`: string 脚本的下载地址
+`url`: string Script download address
 
-`desc`: string 脚本描述，控制在30字以内，简单的描述，详细描述写到markdown中
+`desc`: string Script description, controlled within 30 words, simple description, detailed description written in markdown
 
-`down_count`: int 脚本下载数量
+`down_count`: int Script download count
 
-## 完整格式
+## Complete format
 
-完整格式下仓库可以用于更多的功能
+The warehouse in the complete format can be used for more functions
 
 ```json
 {
-    "name": "",
-    "icon": "",
-    "list": "",
-    "push": "",
-    "markdown": "",
-    "group_qq": "",
-    "group_tg": "",
-    "user_count": 0
+"name": "",
+"icon": "",
+"list": "",
+"push": "",
+"markdown": "",
+"group_qq": "",
+"group_tg": "",
+"user_count": 0
 }
 ```
 
-`name`: string 仓库名称
+`name`: string Warehouse name
 
-`icon`: string 仓库图标的url地址
+`icon`: string URL address of warehouse icon
 
-`list`: string 列表格式的url地址
+`list`: string URL address in list format
 
-`push`: string 推送配置url地址
+`push`: string URL address of push configuration
 
-`markdown`: string 仓库详细说明markdown文件url地址
+`markdown`: string URL address of markdown file with detailed warehouse information
 
-`group_qq`: string qq群的key 在这里获取 [https://qun.qq.com/join.html](https://qun.qq.com/join.html)
+`group_qq`: string QQ group key is available here [https://qun.qq.com/join.html](https://qun.qq.com/join.html)
 
-`group_tg`: string 例如群链接为 https://t.me/jshookgroup 填写jshookgroup即可
+`group_tg`: string For example, if the group link is https://t.me/jshookgroup, fill in jshookgroup
 
-`user_count`: int 仓库用户数量
+`user_count`: int Number of warehouse users
 
-### 推送配置
+### Push configuration
 
-如果仓库使用了完整格式，需要使用推送的话，push文件的json格式如下
+If the warehouse uses the full format and needs to use push, the json format of the push file is as follows
 
 ```json
 [
-    {
-        "id": "",
-        "title": "",
-        "args": "",
-        "action": ""
-    }
+{
+"id": "",
+"title": "",
+"args": "",
+"action": ""
+}
 ]
 ```
 
-jshook的设置中允许接收消息通知才能收到推送内容
+Only when jshook settings allow receiving message notifications can push content be received
 
-为了不干扰用户，推送不会实时收到，有触发条件，当用户打开jshook或者其他注入jshook服务的应用时会开始拉取推送内容，通过id判断用户如果没有接收过开始消息通知
+In order not to interfere with users, pushes will not be received in real time. There are trigger conditions. When the user opens jshook or other applications that inject jshook services, push content will be pulled. If the user has not received the start message notification, the id will be used to determine if the user has not received it
 
-`id`: string 推送唯一标识
+`id`: string Push unique identifier
 
-`title`: string 消息标题
+`title`: string Message title
 
-`args`: string 当action为markdown时填写markdown文件url地址
+`args`: string When action is markdown, fill in the markdown file URL address
 
-`action`: string 跳转类型，固定值为markdown
+`action`: string Jump type, fixed value is markdown
 
 ## DeepLink
 
-在html中可以使用以下方式跳转jshook添加仓库订阅，其实url为仓库的订阅url地址
+In html, you can use the following method to jump to jshook to add warehouse subscriptions. In fact, the url is the subscription url address of the warehouse
 
 ```html
-<a href="jshook://store?url=http://xxxxx.com">添加仓库订阅</>
+<a href="jshook://store?url=http://xxxxx.com">Add warehouse subscription</>
+
 ```
