@@ -1,15 +1,15 @@
-# 交流
+# Communication
 
-提供了`Telegram`沟通途径，非本页面提供的其它交流途径均非官方行为。
+Telegram is provided as a communication channel. Other communication channels not provided on this page are unofficial.
 
-## Telegram交流群
+## Telegram communication group
 
-交流群只提供jshook相关使用问题，脚本功能相关咨询请联系脚本作者
+The communication group only provides jshook-related usage issues. For script function related inquiries, please contact the script author
 
-频道:
+Channel:
 
 [https://t.me/jshookapp](https://t.me/jshookapp)
 
-交流群:
+Communication group:
 
 [https://t.me/jshookgroup](https://t.me/jshookgroup)
