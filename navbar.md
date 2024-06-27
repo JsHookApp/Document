@@ -1,5 +1,4 @@
-* [官网首页](https://jshook.org)
+* [Official website](https://jshook.org)
 
-* 语言
-    * [中文](/)
-    
+* Language
+* [Chinese](/)
