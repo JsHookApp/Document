@@ -1,3 +1,3 @@
-# 简介
+# Introduction
 
-jshook是对应用程序注入frida，你只需要会js就可以快速实现hook，并且支持java层和native层，降低开发人员的技术门槛，简化hook流程。
+jshook is to inject Frida into the application. You only need to know JS to quickly implement the hook. It supports Java layer and native layer, lowering the technical threshold for developers and simplifying the hook process.
