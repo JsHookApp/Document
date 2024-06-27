@@ -1,35 +1,35 @@
 # base64
 
-用于进行字符串base64编码解码
+Used for base64 encoding and decoding of strings
 
 ## base64.encode(data)
 
-`参数`:
+`Parameters`:
 
 `data`: string
 
-`返回值`: string
+`Return value`: string
 
 ## base64.encodeBytes(data)
 
-`参数`:
+`Parameters`:
 
 `data`: byte[]
 
-`返回值`: byte[]
+`Return value`: byte[]
 
 ## base64.decode(data)
 
-`参数`:
+`Parameters`:
 
 `data`: string
 
-`返回值`: string
+`Return value`: string
 
 ## base64.decodeBytes(data)
 
-`参数`:
+`Parameters`:
 
 `data`: byte[]
 
-`返回值`: byte[]
+`Return value`: byte[]
