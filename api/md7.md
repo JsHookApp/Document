@@ -1,50 +1,50 @@
 # file
 
-用于对文件进行相关操作
+Used to perform related operations on files
 
 ## file.isFile(path)
 
-`参数`:
+`Parameters`:
 
 `path`: string
 
-`返回值`: boolean
+`Return value`: boolean
 
 ## file.isDir(path)
 
-`参数`:
+`Parameters`:
 
 `path`: string
 
-`返回值`: boolean
+`Return value`: boolean
 
 ## file.isExists(path)
 
-`参数`:
+`Parameters`:
 
 `path`: string
 
-`返回值`: boolean
+`Return value`: boolean
 
 ## file.read(path)
 
-`参数`:
+`Parameters`:
 
 `path`: string
 
-`返回值`: string
+`Return value`: string
 
 ## file.readBytes(path)
 
-`参数`:
+`Parameters`:
 
 `path`: string
 
-`返回值`: byte[]
+`Return value`: byte[]
 
 ## file.write(path,content)
 
-`参数`:
+`Parameters`:
 
 `path`: string
 
@@ -52,7 +52,7 @@
 
 ## file.writeBytes(path,content)
 
-`参数`:
+`Parameters`:
 
 `path`: string
 
@@ -60,7 +60,7 @@
 
 ## file.append(path,content)
 
-`参数`:
+`parameters`:
 
 `path`: string
 
@@ -68,7 +68,7 @@
 
 ## file.appendBytes(path,content)
 
-`参数`:
+`parameters`:
 
 `path`: string
 
@@ -76,7 +76,7 @@
 
 ## file.copy(path,topath)
 
-`参数`:
+`parameters`:
 
 `path`: string
 
@@ -84,7 +84,7 @@
 
 ## file.move(path,topath)
 
-`参数`:
+`parameters`:
 
 `path`: string
 
@@ -92,7 +92,7 @@
 
 ## file.rename(path,newname)
 
-`参数`:
+`parameters`:
 
 `path`: string
 
@@ -100,23 +100,23 @@
 
 ## file.delete(path)
 
-`参数`:
+`parameters`:
 
 `path`: string
 
 ## file.getName(path)
 
-`参数`:
+`parameters`:
 
 `path`: string
 
 ## file.getSize(path)
 
-`返回值`: long
+`Return value`: long
 
 ## file.zip(path,topath,passwd)
 
-`参数`:
+`Parameters`:
 
 `path`: string
 
@@ -126,7 +126,7 @@
 
 ## file.zip(path,topath)
 
-`参数`:
+`Parameters`:
 
 `path`: string
 
@@ -134,7 +134,7 @@
 
 ## file.unzip(path,topath,passwd)
 
-`参数`:
+`Parameters`:
 
 `path`: string
 
@@ -144,7 +144,17 @@
 
 ## file.unzip(path,topath)
 
-`参数`:
+`Parameters`:
+
+`path`: string
+
+`topath`: string
+
+`passwd`: string
+
+## file.unzip(path,topath)
+
+`Parameters`:
 
 `path`: string
 
