@@ -1,123 +1,123 @@
 # device
 
-用于获取当前设备的基础信息
+Used to obtain basic information of the current device
 
 ## device.isAdbEnabled()
 
-判断设备 ADB 是否可用
+Determine whether the device ADB is available
 
-`返回值`: boolean
+`Return value`: boolean
 
 ## device.getSDKVersionName()
 
-获取设备系统版本号
+Get the device system version number
 
-`返回值`: string
+`Return value`: string
 
 ## device.getSDKVersionCode()
 
-获取设备系统版本码
+Get the device system version code
 
-`返回值`: int
+`Return value`: int
 
 ## device.getAndroidID()
 
-获取设备 AndroidID
+Get the device AndroidID
 
-`返回值`: string
+`Return value`: string
 
 ## device.getMacAddress()
 
-获取设备 MAC 地址
+Get the device MAC address
 
-`返回值`: string
+`Return value`: string
 
 ## device.getManufacturer()
 
-获取设备厂商
+Get the device manufacturer
 
-`返回值`: string
+`Return value`: string
 
 ## device.getModel()
 
-获取设备型号
+Get the device model
 
-`返回值`: string
+`Return value`: string
 
 ## device.getABIs()
 
-获取设备 ABIs
+Get the device ABIs
 
-`返回值`: string
+`Return value`: string
 
 ## device.isTablet()
 
-判断是否是平板
+Determine whether it is a tablet
 
-`返回值`: boolean
+`Return value`: boolean
 
 ## device.isDevelopmentSettingsEnabled()
 
-开发者选项是否打开
+Whether the developer options are turned on
 
-`返回值`: boolean
+`Return value`: boolean
 
 ## device.getScreenWidth()
 
-获取屏幕的宽度（单位：px）
+Get the width of the screen (unit: px)
 
-`返回值`: int
+`Return value`: int
 
 ## device.getScreenHeight()
 
-获取屏幕的高度（单位：px）
+Get the height of the screen (unit: px)
 
-`返回值`: int
+`Return value`: int
 
 ## device.getScreenDensity()
 
-获取屏幕密度
+Get the screen density
 
-`返回值`: float
+`Return value`: float
 
 ## device.getScreenDensityDpi()
 
-获取屏幕密度 DPI
+Get the screen density DPI
 
-`返回值`: int
+`Return value`: int
 
 ## device.isLandscape()
 
-判断是否横屏
+Determine whether the screen is horizontal
 
-`返回值`: boolean
+`Return value`: boolean
 
 ## device.isPortrait()
 
-判断是否竖屏
+Determine whether the screen is vertical
 
-`返回值`: boolean
+`Return value`: boolean
 
 ## device.screenShot(activity)
 
-截屏
+Screenshot
 
-`参数`:
+`Parameters`:
 
 `activity`: Activity
 
-`返回值`: Bitmap
+`Return value`: Bitmap
 
 ## device.setClipboard(data)
 
-设置剪贴板内容
+Set the clipboard content
 
-`参数`:
+`Parameters`:
 
 `data`: string
 
 ## device.getClipboard()
 
-获取剪贴板内容
+Get the clipboard content
 
-`返回值`: string
+`Return value`: string
