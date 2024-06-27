@@ -1,10 +1,10 @@
 # crypto
 
-用于进行字符串加密解密
+Used for string encryption and decryption
 
 ## crypto.encrypt(key,data,enctype,transformation)
 
-`参数`:
+`Parameters`:
 
 `key`: string
 
@@ -12,13 +12,13 @@
 
 `enctype`: CRYPTO_AES | CRYPTO_DES
 
-`transformation`: 转换的名称 例如 `DES/CBC/PKCS5Padding`
+`transformation`: name of the transformation, for example `DES/CBC/PKCS5Padding`
 
-`返回值`: string
+`Return value`: string
 
 ## crypto.encryptBytes(key,data,enctype,transformation)
 
-`参数`:
+`Parameters`:
 
 `key`: byte[]
 
@@ -26,13 +26,13 @@
 
 `enctype`: CRYPTO_AES | CRYPTO_DES
 
-`transformation`: 转换的名称 例如 `DES/CBC/PKCS5Padding`
+`transformation`: name of the transformation, for example `DES/CBC/PKCS5Padding`
 
-`返回值`: byte[]
+`Return value`: byte[]
 
 ## crypto.decrypt(key,data,enctype,transformation)
 
-`参数`:
+`Parameters`:
 
 `key`: string
 
@@ -40,13 +40,13 @@
 
 `enctype`: CRYPTO_AES | CRYPTO_DES
 
-`transformation`: 转换的名称 例如 `DES/CBC/PKCS5Padding`
+`transformation`: name of the transformation e.g. `DES/CBC/PKCS5Padding`
 
-`返回值`: string
+`return`: string
 
 ## crypto.decryptBytes(key,data,enctype,transformation)
 
-`参数`:
+`parameters`:
 
 `key`: byte[]
 
@@ -54,94 +54,94 @@
 
 `enctype`: CRYPTO_AES | CRYPTO_DES
 
-`transformation`: 转换的名称 例如 `DES/CBC/PKCS5Padding`
+`transformation`: name of the transformation e.g. `DES/CBC/PKCS5Padding`
 
-`返回值`: byte[]
+`return`: byte[]
 
 ## crypto.rc4Encrypt(key,data)
 
-`参数`:
+`parameters`:
 
 `key`: string
 
 `data`: string
 
-`返回值`: string
+`return`: string
 
 ## crypto.rc4EncryptBytes(key,data)
 
-`参数`:
+`parameters`:
 
 `key`: byte[]
 
 `data`: byte[]
 
-`返回值`: byte[]
+`return`: byte[]
 
 ## crypto.rc4Decrypt(key,data)
 
-`参数`:
+`parameters`:
 
 `key`: string
 
 `data`: string
 
-`返回值`: string
+`return`: string
 
 ## crypto.rc4DecryptBytes(key,data)
 
-`参数`:
+`parameters`:
 
 `key`: byte[]
 
 `data`: byte[]
 
-`返回值`: byte[]
+`return`: byte[]
 
 ## crypto.md5(data)
 
-`参数`:
+`parameters`:
 
 `data`: string
 
-`返回值`: string
+`return`: string
 
 ## crypto.md5Bytes(data)
 
-`参数`:
+`parameters`:
 
 `data`: byte[]
 
-`返回值`: string
+`return`: string
 
 ## crypto.sha1(data)
 
-`参数`:
+`parameters`:
 
 `data`: string
 
-`返回值`: string
+`return`: string
 
 ## crypto.sha1Bytes(data)
 
-`参数`:
+`Parameters`:
 
 `data`: byte[]
 
-`返回值`: string
+`Return value`: string
 
 ## crypto.sha256(data)
 
-`参数`:
+`Parameters`:
 
 `data`: string
 
-`返回值`: string
+`Return value`: string
 
 ## crypto.sha256Bytes(data)
 
-`参数`:
+`Parameters`:
 
 `data`: byte[]
 
-`返回值`: string
+`Return value`: string

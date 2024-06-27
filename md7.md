@@ -1,29 +1,29 @@
-# 常见问题
+# Frequently Asked Questions
 
-常见的一些问题处理方案
+Some common problem-solving solutions
 
-## jshook相关文件在哪下载
+## Where to download jshook related files
 
-如果你想里离线下载一些文件，可以在这里找到
+If you want to download some files offline, you can find them here
 
-在这里下载: [https://github.com/JsHookApp/Download](https://github.com/JsHookApp/Download)
+Download here: [https://github.com/JsHookApp/Download](https://github.com/JsHookApp/Download)
 
-## 加密脚本如何支持
+## How to support encrypted scripts
 
-目前加密脚本只能使用`fridamod`框架运行
+Currently, encrypted scripts can only be run using the `fridamod` framework
 
-## 应用闪退
+## Application crash
 
-部分机型实时注入脚本会直接发生闪退情况，你可以先关闭hook服务，先启动应用，等待几秒后在开启hook服务会途中开始注入，在测试之前先取消勾选脚本，排除脚本原因
+Some models will crash directly when injecting scripts in real time. You can turn off the hook service first, start the application first, wait a few seconds, and then start the injection when the hook service is turned on. Uncheck the script before testing to eliminate the script cause
 
-## frida-server如何连接
+## How to connect to frida-server
 
-jshook提供的frida-server默认端口号为`28042/28043`
+The default port number of frida-server provided by jshook is `28042/28043`
 
-连接示例
+Connection example
 
 ```shell
-#端口转发
+#Port forwarding
 adb forward tcp:28042 tcp:28042
 
 #spawn
@@ -32,45 +32,45 @@ frida -H 127.0.0.1:28042 -f com.android.xxx -l test.js
 frida -H 127.0.0.1:28042 -n com.android.xxx -l test.js
 ```
 
-## frida-gadget如何连接
+## How to connect frida-gadget
 
-与frida-server一样更改了端口
+The port has been changed like frida-server
 
-连接示例
+Connection example
 
 ```shell
-#端口转发
+#Port forwarding
 adb forward tcp:28042 tcp:28042
 
 #attach
 frida -H 127.0.0.1:28042 Gadget -l test.js
 ```
 
-## 开启渲染掉激活
+## Turn on rendering and deactivate
 
-渲染增强默认是开启的，部分机型不支持，清理应用数据后在激活状态下先关闭渲染增强在开启渲染
+Rendering enhancement is enabled by default, but not supported on some models. After cleaning the application data, turn off rendering enhancement in the activated state and then turn on rendering
 
-## 什么是渲染增强
+## What is rendering enhancement
 
-渲染增强指不依赖android系统的情况下直接使用底层api进行渲染，android系统无法感知存在，所以在增强模式下性能最好，且屏幕录制和截屏无法获取到渲染数据
+Rendering enhancement means using the underlying API for rendering directly without relying on the Android system. The Android system cannot sense its existence, so the performance is best in enhanced mode, and screen recording and screenshots cannot obtain rendering data
 
-没有开启渲染增强则使用android系统的api创建渲染试图，性能会有损失，且受系统管控，屏幕录制和截屏可以获取到渲染数据
+If rendering enhancement is not enabled, the Android system API is used to create rendering views, which will result in performance loss and be controlled by the system. Screen recording and screenshots can obtain rendering data
 
-## 如何让我的机型支持渲染增强
+## How to make my model support rendering enhancement
 
-打开终端(例如mt管理器的终端)输入以下命令
+Open the terminal (such as the terminal of the mt manager) and enter the following command
 ```shell
 su
 logcat|grep ImGui
 ```
-命令的意思是在root用户下持续输出某个关键日志
+The command means to continuously output a key log under the root user
 
-然后开启渲染增强把终端输出的日志发给开发者，开发者会更新模块来兼容你的机型
+Then enable rendering enhancement and send the terminal output log to the developer, who will update the module to be compatible with your model
 
-## 在线服务出现服务器请求失败
+## Server request failure in online service
 
-内置的在线服务可能使用了`github`链接，对于中国大陆用户访问不友好，可以自行准备`vpn`访问
+The built-in online service may use the `github` link, which is not friendly to users in mainland China. You can prepare `vpn` access by yourself
 
-## 跨大版本更新导致jshook闪退
+## Cross-version update causes jshook to crash
 
-例如从1.0.x更新到1.1.x这种跨大版本更新因为调整过大导致不兼容闪退，清空应用数据，删除`/data/system/jshook`和`/data/adb/jshook`，重新安装激活模块，注意，做这些操作之前请先备份脚本和订阅
+For example, a cross-version update from 1.0.x to 1.1.x may cause incompatibility crashes due to large adjustments. Clear the application data, delete `/data/system/jshook` and `/data/adb/jshook`, and reinstall the activation module. Note that you should back up the script and subscription before doing these operations.

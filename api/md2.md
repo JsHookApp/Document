@@ -1,111 +1,111 @@
 # app
 
-用于获取当前hook应用的基本信息
+Used to get the basic information of the current hook application
 
 ## app.isAppSystem()
 
-判断 App 是否是系统应用
+Determine whether the App is a system application
 
-`返回值`: boolean
+`Return value`: boolean
 
 ## app.isAppForeground()
 
-判断 App 是否处于前台
+Determine whether the App is in the foreground
 
-`返回值`: boolean
+`Return value`: boolean
 
 ## app.exitApp()
 
-关闭应用
+Close the application
 
 ## app.getAppInfo()
 
-获取 App 信息
+Get App information
 
-`返回值`: object
+`Return value`: object
 
 ## app.openUrl(url)
 
-打开指定网址
+Open the specified URL
 
-`参数`:
+`Parameter`:
 
-`url`: string 网址
+`url`: string URL
 
 ## app.startActivity(activity)
 
-启动 Activity
+Start Activity
 
-`参数`:
+`Parameter`:
 
 `activity`: Activity
 
 ## app.getActivityList()
 
-获取 Activity 栈链表
+Get the Activity stack list
 
-`返回值`: List<Activity>
+`Return value`: List<Activity>
 
 ## app.finishActivity(activity)
 
-结束 Activity
+End Activity
 
-`参数`:
+`Parameter`:
 
 `activity`: Activity
 
 ## app.finishToActivity(activity)
 
-结束到指定 Activity
+End to the specified Activity
 
-`参数`:
+`Parameters`:
 
 `activity`: Activity
 
 ## app.startHomeActivity()
 
-回到桌面
+Return to the desktop
 
 ## app.dpToPx(value)
 
-dp转px
+dp to px
 
-`参数`:
+`Parameters`:
 
 `value`: float
 
-`返回值`: int
+`Return value`: int
 
 ## app.pxToDp(value)
 
-px转dp
+px to dp
 
-`参数`:
+`Parameters`:
 
 `value`: float
 
-`返回值`: int
+`Return value`: int
 
 ## app.getInternalAppDataPath()
 
-获取内存应用数据路径
+Get the internal application data path
 
-`返回值`: string
+`Return value`: string
 
 ## app.getExternalAppDataPath()
 
-获取外存应用数据路径
+Get the external application data path
 
-`返回值`: string
+`Return value`: string
 
 ## app.getExternalAppObbPath()
 
-获取外存应用 OBB 路径
+Get the external application OBB path
 
-`返回值`: string
+`Return value`: string
 
 ## app.getExternalStoragePath()
 
-获取外存路径
+Get the external storage path
 
-`返回值`: string
+`Return value`: string

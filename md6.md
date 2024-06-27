@@ -1,10 +1,10 @@
-# 安装
+# Installation
 
-这里例举几个常见的安装激活方式
+Here are some common installation and activation methods
 
-## 真机root环境激活
+## Activation in real root environment
 
-你需要确保你的手机已经拥有root权限，并且已经安装以下任意一种root框架
+You need to make sure your phone has root permissions and has installed any of the following root frameworks
 
 `magisk`[https://github.com/topjohnwu/Magisk](https://github.com/topjohnwu/Magisk)
 
@@ -12,22 +12,22 @@
 
 `apatch`[https://github.com/bmax121/APatch](https://github.com/bmax121/APatch)
 
-模块依赖`zygisk/riru`，你需要安装以下任意模块用于支持激活jshook
+Module depends on `zygisk/riru`, You need to install any of the following modules to support the activation of jshook
 
 `zygisk`[https://github.com/Dr-TSNG/ZygiskNext](https://github.com/Dr-TSNG/ZygiskNext)
 
 `riru`[https://github.com/RikkaApps/Riru](https://github.com/RikkaApps/Riru)
 
-**这里推荐使用zygisk，riru已经不在更新维护**
+**It is recommended to use zygisk here, riru is no longer updated and maintained**
 
-以上准备就绪后打开jshook点击`安装Magisk/kernelSU模块`按钮选择，选择对应的`zygisk/riru`版本的jshook模块进行安装，安装后重启手机即可完成激活
+After the above preparations are ready, open jshook and click the `Install Magisk/kernelSU module` button to select the corresponding `zygisk/riru` version of jshook module to install. After installation, restart the phone to complete the activation
 
-## 虚拟机环境激活
+## Activate the virtual machine environment
 
-使用`vmos`或者`光速虚拟机`等类似产品进行安装激活操作，操作方式同root环境激活的方式流程一样
+Use `vmos` or `Lightspeed virtual machine` and other similar products to install and activate the operation. The operation method is the same as the root environment activation method.
 
-## 模拟器环境激活
+## Simulator environment activation
 
-下载`MagiskDelta`，在模拟器中直接安装，再按照上面root环境激活的方式继续操作
+Download `MagiskDelta`, install it directly in the simulator, and then continue to operate according to the above root environment activation method
 
 [https://magiskdelta.com/](https://magiskdelta.com)
