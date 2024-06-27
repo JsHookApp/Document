@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <title>JsHook Document</title>
-    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
-    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
-    <meta name="referrer" content="never">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css" />
+<title>JsHook Document</title>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+<meta name="referrer" content="never">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css" />
 </head>
 <body>
 <div id="app"></div>
 <script type="text/javascript">
-    window.$docsify = {
-        name: 'JsHook Document',
-        repo: 'https://github.com/JsHookApp',
-        notFoundPage: '404.md',//在找不到指定页面时加载_404.md
-        loadSidebar: 'sidebar.md',//加载自定义侧边栏_sidebar.md
-        subMaxLevel: 2,//生成目录的最大层级
-        loadNavbar: 'navbar.md',//加载自定义导航栏_navbar.md
-        auto2top: true,//切换页面后是否自动跳转到页面顶部
-        coverpage: 'coverpage.md',//启用封面页_coverpage.md
-        themeColor: '#2C3E50',//替换主题色,
-        homepage: 'README.md',//设置首页文件
-        search: {
-            noData: {
-                '/': '没有找到结果'
-            },
-            placeholder: {
-                '/': '输入关键词搜索'
-            }
-        },
-        alias: {
-            '/.*/sidebar.md': '/sidebar.md',
-            '/.*/navbar.md': '/navbar.md'
-        },
-        copyCode: {
-            buttonText: '复制',
-            errorText: '复制失败',
-            successText: '复制成功'
-        }
-    };
+window.$docsify = {
+name: 'JsHook Document',
+repo: 'https://github.com/JsHookApp',
+notFoundPage: '404.md',//Load when the specified page is not found_404.md
+loadSidebar: 'sidebar.md',//Load custom sidebar_sidebar.md
+subMaxLevel: 2,//Maximum level of generated directory
+loadNavbar: 'navbar.md',//Load custom navigation bar_navbar.md
+auto2top: true,//Whether to automatically jump to the top of the page after switching pages
+coverpage: 'coverpage.md',//Enable cover page_coverpage.md
+themeColor: '#2C3E50',//Replace theme color,
+homepage: 'README.md',//Set homepage file
+search: {
+noData: {
+'/': 'No results found'
+},
+placeholder: {
+'/': 'Enter keyword search'
+}
+},
+alias: {
+'/.*/sidebar.md': '/sidebar.md',
+'/.*/navbar.md': '/navbar.md'
+},
+copyCode: {
+buttonText: 'copy',
+errorText: 'copy failed',
+successText: 'copy successful'
+}
+};
 </script>
 <script type="text/javascript" src="//unpkg.com/docsify/lib/docsify.min.js"></script>
 <script type="text/javascript" src="//unpkg.com/docsify-copy-code@2"></script>
