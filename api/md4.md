@@ -1,37 +1,37 @@
 # media
 
-用于播放音乐
+Used to play music
 
 ## media.create(data)
 
-`参数`:
+`Parameters`:
 
-`data`: url地址或者文件base64值
+`data`: url address or file base64 value
 
-`返回值`: 实例
+`Return value`: instance
 
-调用后默认会自动播放，无需调用start
+After calling, it will play automatically by default, no need to call start
 
-## [实例].start()
+## [Instance].start()
 
-开始播放
+Start playing
 
-## [实例].pause()
+## [Instance].pause()
 
-暂停播放
+Pause playing
 
-## [实例].stop()
+## [Instance].stop()
 
-停止播放
+Stop playing
 
-## [实例].loop(state)
+## [Instance].loop(state)
 
-`参数`:
+`Parameters`:
 
 `state`: boolean
 
-是否循环播放，默认音乐只播放一次
+Whether to play in a loop, by default, music is played only once
 
 ## media.closeAll()
 
-关闭所有实例
+Close all instances
