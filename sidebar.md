@@ -12,7 +12,7 @@
   
   * [Connect Computer](md8)
   
-  * Self-built Warehouse
+ * Self-built Warehouse
   
   * [Instructions](md2)
 
