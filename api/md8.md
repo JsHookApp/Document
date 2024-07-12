@@ -1,10 +1,10 @@
 # http
 
-用于进行网络请求，注意，需要被hook的应用拥有网络访问权限
+Used for network requests. Note that the hooked application needs to have network access permissions
 
 ## http.get(url,headers,function)
 
-`参数`:
+`Parameters`:
 
 `url`: string
 
@@ -12,7 +12,7 @@
 
 `function`: function
 
-示例：
+Example:
 
 ```javascript
 http.get('http://xxxxx.com', {
@@ -29,7 +29,7 @@ http.get('http://xxxxx.com', {
 
 ## http.post(url,data,headers,function)
 
-`参数`:
+`Parameters`:
 
 `url`: string
 
@@ -39,7 +39,7 @@ http.get('http://xxxxx.com', {
 
 `function`: function
 
-示例：
+Example:
 
 ```javascript
 http.post('http://xxxxx.com', {
@@ -55,7 +55,7 @@ http.post('http://xxxxx.com', {
     }
 });
 
-//或者
+//or
 
 http.post('http://xxxxx.com', JSON.stringify({
     'user': 'me'
@@ -71,6 +71,6 @@ http.post('http://xxxxx.com', JSON.stringify({
 });
 ```
 
-## 注意事项
+## Notes
 
-headers中的key和value必须都是string类型，当data为object时为表单提交，header头部会加入content-type:application/x-www-form-urlencoded，如果提交content-type:application/json，需要确定data参数类型为string
+The key and value in the headers must both be string types. When data is an object, it is a form submission. The header will add content-type:application/x-www-form-urlencoded. If content-type:application/json is submitted, it is necessary to make sure that the data parameter type is string
