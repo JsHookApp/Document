@@ -1,5 +1,5 @@
 # JsHook Document
 
-用js实现hook 支持java层和native层
+Use js to implement hook, support java layer and native layer
 
-[阅读文档](#简介)
+[Read the document](#Introduction)
