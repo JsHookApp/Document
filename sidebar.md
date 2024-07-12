@@ -12,9 +12,9 @@
   
   * [Connect Computer](md8)
   
- * Self-built Warehouse
-  
-  * [Instructions](md2)
+* Self-built Warehouse
+
+ * [Instructions](md2)
 
 * Frida
 
