@@ -4,25 +4,25 @@
 
 ## toast(message)
 
-`参数`:
+`parameter`:
 
 `message`: string
 
 ## alert(message)
 
-`参数`:
+`parameter`:
 
 `message`: string
 
 ## confirm(message,callback)
 
-`参数`:
+`parameter`:
 
 `message`: string
 
 `callback`: function
 
-示例：
+Example：
 
 ```javascript
 confirm('is ok?', {
@@ -37,6 +37,6 @@ confirm('is ok?', {
 
 ## uuid()
 
-返回32位小写uuid
+Returns 32-bit lowercase uuid
 
-`返回值`: string
+`return value`: string
