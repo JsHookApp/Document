@@ -1,5 +1,5 @@
-* [官网首页](https://jshook.org)
+* [Official website](https://jshook.org)
 
-* 语言
-    * [中文](/)
-    
+* Language
+* [Chinese]([/](https://github.com/JsHookApp/Document/tree/main))
+* [English]([/](https://github.com/JsHookApp/Document/tree/lang-en))
