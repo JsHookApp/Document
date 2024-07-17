@@ -64,5 +64,5 @@
 
     * [colors](api/md16)
 
-    * [canvas][api/md21]
+    * [canvas](api/md21)
     
