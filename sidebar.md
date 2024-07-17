@@ -63,4 +63,6 @@
     * [keys](api/md15)
 
     * [colors](api/md16)
+
+    * [canvas][api/md21]
     
