@@ -7,39 +7,31 @@ JsHook 内置了 MCP（Model Context Protocol）服务器，可以通过 VS Code
 1. 手机已 root 并安装 JsHook
 2. JsHook 已激活并运行
 3. 电脑已安装 VS Code 和 GitHub Copilot 扩展
-4. 手机与电脑处于同一局域网，或通过 USB 连接并开启 ADB 端口转发
+4. 手机与电脑处于同一局域网
 
 ## 启用 MCP 服务
 
 1. 打开 JsHook 应用
 2. 进入 **设置** → **MCP 服务**
 3. 开启 MCP 服务开关
-4. 记录显示的端口号（默认 `28050`）
+4. 记录显示的 IP 地址和端口号（默认端口 `28050`）
 
 ## 连接配置
 
-### USB 连接（推荐）
-
-```shell
-# 端口转发
-adb forward tcp:28050 tcp:28050
-```
-
-### VS Code 配置
-
-在 VS Code 的 `.vscode/mcp.json` 或用户设置中添加 MCP 服务器配置：
+确保手机和电脑在同一局域网内，在 VS Code 的 `.vscode/mcp.json` 或用户设置中添加 MCP 服务器配置：
 
 ```json
 {
   "servers": {
     "jshook": {
-      "type": "stdio",
-      "command": "npx",
-      "args": ["-y", "mcp-remote", "http://127.0.0.1:28050/mcp"]
+      "type": "http",
+      "url": "http://手机IP:28050/mcp"
     }
   }
 }
 ```
+
+将 `手机IP` 替换为手机在局域网中的实际 IP 地址，例如 `192.168.1.100`。
 
 ## 可用工具列表
 

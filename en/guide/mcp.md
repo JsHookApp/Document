@@ -7,39 +7,31 @@ JsHook has a built-in MCP (Model Context Protocol) server that allows AI tools l
 1. Phone is rooted with JsHook installed
 2. JsHook is activated and running
 3. VS Code with GitHub Copilot extension installed on your computer
-4. Phone and computer on the same LAN, or connected via USB with ADB port forwarding
+4. Phone and computer on the same LAN
 
 ## Enable MCP Service
 
 1. Open JsHook app
 2. Go to **Settings** → **MCP Service**
 3. Enable the MCP service toggle
-4. Note the displayed port number (default `28050`)
+4. Note the displayed IP address and port number (default port `28050`)
 
 ## Connection Configuration
 
-### USB Connection (Recommended)
-
-```shell
-# Port forwarding
-adb forward tcp:28050 tcp:28050
-```
-
-### VS Code Configuration
-
-Add MCP server configuration in `.vscode/mcp.json` or user settings:
+Make sure the phone and computer are on the same LAN. Add MCP server configuration in `.vscode/mcp.json` or VS Code user settings:
 
 ```json
 {
   "servers": {
     "jshook": {
-      "type": "stdio",
-      "command": "npx",
-      "args": ["-y", "mcp-remote", "http://127.0.0.1:28050/mcp"]
+      "type": "http",
+      "url": "http://PHONE_IP:28050/mcp"
     }
   }
 }
 ```
+
+Replace `PHONE_IP` with your phone's actual LAN IP address, e.g. `192.168.1.100`.
 
 ## Available Tools
 
