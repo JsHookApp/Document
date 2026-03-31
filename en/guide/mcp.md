@@ -25,13 +25,26 @@ Make sure the phone and computer are on the same LAN. Add MCP server configurati
   "servers": {
     "jshook": {
       "type": "http",
-      "url": "http://PHONE_IP:28050/mcp"
+      "url": "http://PHONE_IP:28050/mcp",
+      "headers": {
+        "X-Api-Key": "YOUR_API_KEY"
+      }
     }
   }
 }
 ```
 
 Replace `PHONE_IP` with your phone's actual LAN IP address, e.g. `192.168.1.100`.
+
+### API Key Authentication
+
+When the MCP service starts, an API Key is automatically generated to verify client authenticity. All requests must include the `X-Api-Key` header to pass validation.
+
+**Getting your API Key:**
+- Tap the MCP service connection info button — the dialog shows the API Key and the complete VS Code configuration (with the key already included)
+- Simply copy the configuration to use it
+
+> ⚠️ The API Key is generated on first launch and persisted. Keep it safe and do not share it with untrusted parties.
 
 ## Available Tools
 
@@ -102,6 +115,7 @@ Replace `PHONE_IP` with your phone's actual LAN IP address, e.g. `192.168.1.100`
 
 | Tool | Description |
 |------|-------------|
+| `frida_list_targets` | List target apps with FridaMod injected and MCP mode enabled |
 | `frida_execute` | Execute Frida JS script in the target app |
 | `frida_unload` | Unload the running script in the target app |
 | `frida_read_log` | Read target app runtime logs (console.log output) |
@@ -148,6 +162,24 @@ Draw red text "Health: 100" at screen coordinates (500, 300)
 ```
 
 ### MCP Mode Examples
+
+#### Auto-Discover Target Apps
+
+With MCP Mode enabled, you don't need to manually specify the target process. AI can automatically discover target apps that have FridaMod injected with MCP mode enabled via the `frida_list_targets` tool:
+
+```
+Which target app is currently injected?
+```
+
+AI will automatically call `frida_list_targets` to query the list of injected apps, then you can choose the target app for further operations. This approach is more convenient than manually using `set_target` to set the target process, since FridaMod is already injected into the target app and AI can directly execute Frida scripts on it.
+
+```
+Check which apps are currently injected, then run a simple test script on the first one
+```
+
+#### Manually Specify Target App
+
+If you need to operate on a specific app, you can also directly specify the package name:
 
 ```
 Show me the Frida extension API documentation

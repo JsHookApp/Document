@@ -25,13 +25,26 @@ JsHook 内置了 MCP（Model Context Protocol）服务器，可以通过 VS Code
   "servers": {
     "jshook": {
       "type": "http",
-      "url": "http://手机IP:28050/mcp"
+      "url": "http://手机IP:28050/mcp",
+      "headers": {
+        "X-Api-Key": "你的API密钥"
+      }
     }
   }
 }
 ```
 
 将 `手机IP` 替换为手机在局域网中的实际 IP 地址，例如 `192.168.1.100`。
+
+### API Key 认证
+
+MCP 服务启用后会自动生成 API Key 密钥，用于验证客户端的合法性。所有请求都必须在 HTTP 头中携带 `X-Api-Key` 才能通过验证。
+
+**获取 API Key：**
+- 点击 MCP 服务的连接信息按钮，弹窗中会显示 API Key 和完整的 VS Code 配置（已包含密钥）
+- 直接复制配置即可使用
+
+> ⚠️ API Key 在首次启动 MCP 服务时自动生成并持久化保存，请妥善保管，不要泄露给不信任的第三方。
 
 ## 可用工具列表
 
@@ -102,6 +115,7 @@ JsHook 内置了 MCP（Model Context Protocol）服务器，可以通过 VS Code
 
 | 工具名 | 功能 |
 |--------|------|
+| `frida_list_targets` | 查询已注入 FridaMod 且开启 MCP 模式的目标应用列表 |
 | `frida_execute` | 在目标应用中执行 Frida JS 脚本 |
 | `frida_unload` | 卸载目标应用中正在执行的脚本 |
 | `frida_read_log` | 读取目标应用的运行日志 (console.log 输出) |
@@ -148,6 +162,24 @@ JsHook 内置了 MCP（Model Context Protocol）服务器，可以通过 VS Code
 ```
 
 ### MCP 模式示例
+
+#### 自动发现目标应用
+
+开启 MCP 模式后，无需手动指定目标进程。AI 可以通过 `frida_list_targets` 工具自动发现已注入 FridaMod 并开启 MCP 模式的目标应用：
+
+```
+当前注入的目标应用是哪个？
+```
+
+AI 会自动调用 `frida_list_targets` 查询已注入的应用列表，然后你可以选择目标应用进行后续操作。这种方式比手动使用 `set_target` 设置目标进程更方便，因为 FridaMod 已经注入到目标应用中，AI 可以直接对其执行 Frida 脚本。
+
+```
+查看当前注入了哪些应用，然后对第一个应用执行一个简单的测试脚本
+```
+
+#### 手动指定目标应用
+
+如果你需要对特定应用操作，也可以直接指定包名：
 
 ```
 查看 frida 扩展 API 文档
