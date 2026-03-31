@@ -96,6 +96,32 @@ JsHook 内置了 MCP（Model Context Protocol）服务器，可以通过 VS Code
 | `kernel_read_int32` / `int64` / `float` / `double` / `bytes` | 内核级内存读取 |
 | `kernel_write_int32` / `int64` / `float` / `double` / `bytes` | 内核级内存写入 |
 
+### Frida MCP 模式（远程脚本执行）
+
+> 需要在应用注入配置中开启 **MCP 模式**，且注入框架必须是 FridaMod。
+
+| 工具名 | 功能 |
+|--------|------|
+| `frida_execute` | 在目标应用中执行 Frida JS 脚本 |
+| `frida_unload` | 卸载目标应用中正在执行的脚本 |
+| `frida_read_log` | 读取目标应用的运行日志 (console.log 输出) |
+| `frida_save_script` | 将脚本保存到 JsHook 的脚本目录 |
+| `frida_api_info` | 获取 JsHook Frida 扩展 API 文档 |
+
+### ESP 分析与渲染
+| 工具名 | 功能 |
+|--------|------|
+| `scan_vp_matrix` | 扫描 VP 矩阵候选地址 |
+| `scan_entity_array` | 扫描实体数组候选地址 |
+| `validate_matrix` | 验证矩阵数据有效性 |
+| `world_to_screen` | 世界坐标转屏幕坐标 |
+| `mem_read_float_array` | 批量读取浮点数组 |
+| `mem_diff_region` | 内存区域变化对比 |
+| `esp_start` | 启动 ESP 渲染 |
+| `esp_stop` | 停止 ESP 渲染 |
+| `esp_status` | 查询 ESP 运行状态 |
+| `esp_update` | 更新 ESP 渲染配置 |
+
 ### 其他
 | 工具名 | 功能 |
 |--------|------|
@@ -121,9 +147,69 @@ JsHook 内置了 MCP（Model Context Protocol）服务器，可以通过 VS Code
 在屏幕坐标 (500, 300) 处绘制红色文字 "Health: 100"
 ```
 
+### MCP 模式示例
+
+```
+查看 frida 扩展 API 文档
+```
+
+```
+在 com.example.game 中执行: Java.perform(function(){ var Activity = Java.use('android.app.Activity'); console.log('Activity loaded'); })
+```
+
+```
+读取 com.example.game 最近的运行日志
+```
+
+```
+将这个脚本保存为 hook_activity.js 到 com.example.game 的脚本目录
+```
+
+## MCP 模式
+
+MCP 模式是 JsHook 的高级功能，允许 AI 通过 MCP 工具远程执行 Frida 脚本。
+
+### 开启 MCP 模式
+
+1. 在 JsHook 中选择目标应用
+2. 进入应用注入配置
+3. 确保注入框架选择 **FridaMod**
+4. 开启 **MCP 模式** 开关
+5. 启动目标应用
+
+开启 MCP 模式后，JsHook 不会注入用户脚本，而是等待 AI 通过 MCP 工具下发脚本执行。
+
+### 工作原理
+
+```
+AI (VS Code Copilot)
+    ↓ MCP HTTP 请求
+JsHook Daemon (MCP Server, 端口 28050)
+    ↓ Unix Domain Socket
+FridaMod (注入在目标应用中)
+    ↓ GumScript eval
+Frida JS 执行 → 返回结果
+```
+
+1. AI 调用 `frida_execute` 工具，发送 JS 代码
+2. Daemon 通过 Unix 域 socket 连接到注入在目标应用中的 FridaMod
+3. FridaMod 在 Frida GumScript 中执行代码
+4. 执行结果原路返回给 AI
+
+### 典型工作流
+
+1. **查看 API** → `frida_api_info` 了解可用的扩展 API
+2. **编写执行** → `frida_execute` 执行 Frida 脚本
+3. **查看日志** → `frida_read_log` 查看 console.log 输出
+4. **迭代调试** → 根据日志调整脚本，重复执行
+5. **保存脚本** → `frida_save_script` 将完成的脚本保存到设备
+
 ## 注意事项
 
 - MCP 工具需要 JsHook 服务持续运行
 - 内核相关工具需要加载内核驱动（参见 [内核驱动模式](guide/kernel)）
 - 内存读写操作应谨慎，错误的地址可能导致目标应用崩溃
 - ImGui 绘制需要目标应用使用 OpenGL/Vulkan 渲染
+- MCP 模式需要 FridaMod 框架，且脚本执行有 30 秒超时限制
+- `frida_execute` 执行的代码在 Frida 全局作用域，可使用 Java.perform、Interceptor 等所有 Frida API
+- ESP 分析工具需要设置目标进程后使用
