@@ -1,62 +1,62 @@
 # file
 
-用于对文件进行相关操作
+File operations.
 
 ## file.isFile(path)
 
-`参数`:
+`Parameters`:
 
 `path`: string
 
-`返回值`: boolean
+`Returns`: boolean
 
 ## file.isDir(path)
 
-`参数`:
+`Parameters`:
 
 `path`: string
 
-`返回值`: boolean
+`Returns`: boolean
 
 ## file.isExists(path)
 
-`参数`:
+`Parameters`:
 
 `path`: string
 
-`返回值`: boolean
+`Returns`: boolean
 
 ## file.read(path)
 
-`参数`:
+`Parameters`:
 
 `path`: string
 
-`返回值`: string
+`Returns`: string
 
 ## file.readBytes(path)
 
-`参数`:
+`Parameters`:
 
 `path`: string
 
-`返回值`: byte[]
+`Returns`: byte[]
 
 ## file.readliens(path,num)
 
-按行读取文件内容
+Read file content by lines.
 
-`参数`:
+`Parameters`:
 
-`path`: string 文件路径
+`path`: string — File path
 
-`num`: long 读取行数
+`num`: long — Number of lines to read
 
-`返回值`: List\<string\>
+`Returns`: List\<string\>
 
 ## file.write(path,content)
 
-`参数`:
+`Parameters`:
 
 `path`: string
 
@@ -64,7 +64,7 @@
 
 ## file.writeBytes(path,content)
 
-`参数`:
+`Parameters`:
 
 `path`: string
 
@@ -72,7 +72,7 @@
 
 ## file.append(path,content)
 
-`参数`:
+`Parameters`:
 
 `path`: string
 
@@ -80,7 +80,7 @@
 
 ## file.appendBytes(path,content)
 
-`参数`:
+`Parameters`:
 
 `path`: string
 
@@ -88,7 +88,7 @@
 
 ## file.copy(path,topath)
 
-`参数`:
+`Parameters`:
 
 `path`: string
 
@@ -96,7 +96,7 @@
 
 ## file.move(path,topath)
 
-`参数`:
+`Parameters`:
 
 `path`: string
 
@@ -104,7 +104,7 @@
 
 ## file.rename(path,newname)
 
-`参数`:
+`Parameters`:
 
 `path`: string
 
@@ -112,23 +112,23 @@
 
 ## file.delete(path)
 
-`参数`:
+`Parameters`:
 
 `path`: string
 
 ## file.getName(path)
 
-`参数`:
+`Parameters`:
 
 `path`: string
 
 ## file.getSize(path)
 
-`返回值`: long
+`Returns`: long
 
 ## file.zip(path,topath,passwd)
 
-`参数`:
+`Parameters`:
 
 `path`: string
 
@@ -138,7 +138,7 @@
 
 ## file.zip(path,topath)
 
-`参数`:
+`Parameters`:
 
 `path`: string
 
@@ -146,7 +146,7 @@
 
 ## file.unzip(path,topath,passwd)
 
-`参数`:
+`Parameters`:
 
 `path`: string
 
@@ -156,7 +156,7 @@
 
 ## file.unzip(path,topath)
 
-`参数`:
+`Parameters`:
 
 `path`: string
 

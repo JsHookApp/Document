@@ -1,45 +1,45 @@
 # json
 
-用于对字符串进行json编码解码
+JSON encoding and decoding for strings.
 
 ## json.toGsonString(data)
 
-`参数`:
+`Parameters`:
 
 `data`: object
 
-`返回值`: string
+`Returns`: string
 
 ## json.gsonStringToClass(data,class)
 
-`参数`:
+`Parameters`:
 
 `data`: string
 
 `class`: class
 
-`返回值`: class
+`Returns`: class
 
 ## json.toJSONString(data)
 
-`参数`:
+`Parameters`:
 
 `data`: object
 
-`返回值`: string
+`Returns`: string
 
 ## json.parseObject(data)
 
-`参数`:
+`Parameters`:
 
 `data`: string
 
-`返回值`: JSONObject
+`Returns`: JSONObject
 
 ## json.parseArray(data)
 
-`参数`:
+`Parameters`:
 
 `data`: string
 
-`返回值`: JSONArray
+`Returns`: JSONArray

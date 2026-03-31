@@ -6,21 +6,25 @@
 
 * 快速入门
 
-    * [安装](md6)
+    * [安装与激活](md6)
 
     * [常见问题](md7)
 
     * [连接计算机](md8)
 
-* 自建仓库
+* 进阶指南
 
-    * [说明](md2)
+    * [MCP 工具使用](guide/mcp)
+
+    * [内核驱动模式](guide/kernel)
+
+    * [自建仓库](md2)
 
 * Frida
 
     * [快速入门](md4)
 
-* API说明
+* API 参考
 
     * [global](api/md0)
 
@@ -65,4 +69,5 @@
     * [colors](api/md16)
 
     * [canvas](api/md21)
-    
+
+    * [thread](api/md22)

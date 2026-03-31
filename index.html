@@ -24,20 +24,32 @@
         homepage: 'README.md',//设置首页文件
         search: {
             noData: {
+                '/en/': 'No results found',
                 '/': '没有找到结果'
             },
             placeholder: {
+                '/en/': 'Search',
                 '/': '输入关键词搜索'
             }
         },
         alias: {
+            '/en/sidebar.md': '/en/sidebar.md',
             '/.*/sidebar.md': '/sidebar.md',
             '/.*/navbar.md': '/navbar.md'
         },
         copyCode: {
-            buttonText: '复制',
-            errorText: '复制失败',
-            successText: '复制成功'
+            buttonText: {
+                '/en/': 'Copy',
+                '/': '复制'
+            },
+            errorText: {
+                '/en/': 'Copy failed',
+                '/': '复制失败'
+            },
+            successText: {
+                '/en/': 'Copy successful',
+                '/': '复制成功'
+            }
         }
     };
 </script>
