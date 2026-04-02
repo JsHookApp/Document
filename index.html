@@ -14,6 +14,19 @@
 <body>
 <div id="app"></div>
 <script type="text/javascript">
+    // 首次访问时根据浏览器语言自动跳转到对应语言文档
+    (function() {
+        var hash = window.location.hash;
+        // 仅在首页（无 hash 或 hash 为空/#/）时自动跳转
+        if (!hash || hash === '#/' || hash === '#') {
+            var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+            // 非中文浏览器跳转到英文文档
+            if (lang && !lang.startsWith('zh')) {
+                window.location.hash = '#/en/';
+            }
+        }
+    })();
+
     window.$docsify = {
         name: 'JsHook Document',
         repo: 'https://github.com/JsHookApp',
@@ -22,7 +35,7 @@
         subMaxLevel: 2,//生成目录的最大层级
         loadNavbar: 'navbar.md',//加载自定义导航栏_navbar.md
         auto2top: true,//切换页面后是否自动跳转到页面顶部
-        coverpage: 'coverpage.md',//启用封面页_coverpage.md
+        coverpage: ['/en/', '/'],//启用封面页_coverpage.md
         themeColor: '#2C3E50',//替换主题色,
         homepage: 'README.md',//设置首页文件
         requestHeaders: {
