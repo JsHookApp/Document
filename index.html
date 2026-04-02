@@ -35,7 +35,10 @@
         subMaxLevel: 2,//生成目录的最大层级
         loadNavbar: 'navbar.md',//加载自定义导航栏_navbar.md
         auto2top: true,//切换页面后是否自动跳转到页面顶部
-        coverpage: ['/en/', '/'],//启用封面页_coverpage.md
+        coverpage: {
+            '/en/': 'coverpage.md',
+            '/': 'coverpage.md'
+        },//启用封面页
         themeColor: '#2C3E50',//替换主题色,
         homepage: 'README.md',//设置首页文件
         requestHeaders: {
