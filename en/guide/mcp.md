@@ -90,6 +90,17 @@ When the MCP service starts, an API Key is automatically generated to verify cli
 |------|-------------|
 | `scan_pattern` | Memory pattern scan |
 | `memory_dump` | Dump specified memory region |
+| `mem_scan` | General memory value search (like Cheat Engine first scan) |
+| `mem_scan_filter` | Filter scan results (like Cheat Engine Next Scan) |
+| `mem_scan_reset` | Reset/clear scan session |
+| `mem_scan_list` | List all active scan sessions |
+
+### Memory Freeze
+| Tool | Description |
+|------|-------------|
+| `mem_freeze` | Freeze memory value (background thread keeps writing) |
+| `mem_freeze_list` | List all currently frozen memory addresses |
+| `mem_unfreeze` | Unfreeze memory value |
 
 ### ImGui Drawing
 | Tool | Description |
@@ -120,21 +131,6 @@ When the MCP service starts, an API Key is automatically generated to verify cli
 | `frida_unload` | Unload the running script in the target app |
 | `frida_read_log` | Read target app runtime logs (console.log output) |
 | `frida_save_script` | Save script to JsHook's script directory |
-| `frida_api_info` | Get JsHook Frida extension API documentation |
-
-### ESP Analysis & Rendering
-| Tool | Description |
-|------|-------------|
-| `scan_vp_matrix` | Scan for VP matrix candidate addresses |
-| `scan_entity_array` | Scan for entity array candidate addresses |
-| `validate_matrix` | Validate matrix data |
-| `world_to_screen` | Convert world coordinates to screen coordinates |
-| `mem_read_float_array` | Batch read float array |
-| `mem_diff_region` | Memory region diff comparison |
-| `esp_start` | Start ESP rendering |
-| `esp_stop` | Stop ESP rendering |
-| `esp_status` | Query ESP rendering status |
-| `esp_update` | Update ESP rendering configuration |
 
 ### Other
 | Tool | Description |
@@ -182,10 +178,6 @@ Check which apps are currently injected, then run a simple test script on the fi
 If you need to operate on a specific app, you can also directly specify the package name:
 
 ```
-Show me the Frida extension API documentation
-```
-
-```
 Execute in com.example.game: Java.perform(function(){ var Activity = Java.use('android.app.Activity'); console.log('Activity loaded'); })
 ```
 
@@ -230,11 +222,10 @@ Frida JS Execution → Return Result
 
 ### Typical Workflow
 
-1. **View APIs** → `frida_api_info` to learn available extension APIs
-2. **Write & Execute** → `frida_execute` to run Frida scripts
-3. **Check Logs** → `frida_read_log` to view console.log output
-4. **Iterate & Debug** → Adjust scripts based on logs, re-execute
-5. **Save Script** → `frida_save_script` to save completed scripts to the device
+1. **Write & Execute** → `frida_execute` to run Frida scripts
+2. **Check Logs** → `frida_read_log` to view console.log output
+3. **Iterate & Debug** → Adjust scripts based on logs, re-execute
+4. **Save Script** → `frida_save_script` to save completed scripts to the device
 
 ## Notes
 
@@ -244,4 +235,3 @@ Frida JS Execution → Return Result
 - ImGui drawing requires the target app to use OpenGL/Vulkan rendering
 - MCP Mode requires the FridaMod framework, with a 30-second timeout for script execution
 - Code executed via `frida_execute` runs in Frida global scope with access to Java.perform, Interceptor, and all Frida APIs
-- ESP analysis tools require a target process to be set first

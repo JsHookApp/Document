@@ -71,3 +71,9 @@
     * [canvas](api/md21)
 
     * [thread](api/md22)
+
+    * [dex](api/md23)
+
+    * [r2](api/md24)
+
+    * [Il2Cpp](api/md25)
