@@ -96,4 +96,22 @@ If the repository uses the full format and needs push notifications, the push JS
 ]
 ```
 
-Push notifications require enabling message notifications in JsHook settings.
+Push notifications are only delivered if the user has allowed message notifications in JsHook's settings.
+
+To avoid disturbing users, pushes are not delivered in real time — they are triggered on demand. When the user opens JsHook, or opens any other app into which the JsHook service is injected, the client pulls the latest push content. The `id` field is used to determine whether the user has already received a given notification.
+
+`id`: string — Unique push identifier
+
+`title`: string — Notification title
+
+`args`: string — When `action` is `markdown`, the URL of the markdown file to open
+
+`action`: string — Navigation type; the only supported value is `markdown`
+
+## DeepLink
+
+In HTML, you can use the following link to prompt JsHook to add a repository subscription. The `url` parameter is the repository's subscription URL.
+
+```html
+<a href="jshook://store?url=http://xxxxx.com">Add repository subscription</a>
+```

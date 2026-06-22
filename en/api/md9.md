@@ -1,6 +1,6 @@
 # json
 
-JSON encoding and decoding for strings.
+Serialize objects to JSON and parse JSON strings back into objects.
 
 ## json.toGsonString(data)
 
