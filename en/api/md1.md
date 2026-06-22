@@ -1,6 +1,6 @@
 # runtime
 
-Get basic information about the current hook runtime.
+Basic information about the current hook runtime.
 
 ## runtime.appInfo
 

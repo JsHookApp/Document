@@ -1,6 +1,6 @@
 # app
 
-Get basic information about the currently hooked application.
+Inspect and control the currently hooked application — its state, activities, paths, and more.
 
 ## app.isAppSystem()
 

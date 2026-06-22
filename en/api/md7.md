@@ -44,7 +44,7 @@ File operations.
 
 ## file.readliens(path,num)
 
-Read file content by lines.
+Read a file line by line.
 
 `Parameters`:
 
