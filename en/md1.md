@@ -1,10 +1,10 @@
 # Community
 
-Communication is available via `Telegram`. Any other communication channels NOT listed on this page are unofficial.
+We use `Telegram` to communicate. Any channel not listed on this page is unofficial.
 
 ## Telegram
 
-The group only provides support for JsHook-related usage questions. For script functionality inquiries, please contact the script author.
+The group is for questions about using JsHook itself. For questions about what a particular script does, please contact that script's author.
 
 Channel:
 

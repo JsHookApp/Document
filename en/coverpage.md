@@ -1,6 +1,6 @@
-# JsHook Document
+# JsHook Documentation
 
-Hook with JavaScript, supporting both Java layer and Native layer
+Hook Android apps with JavaScript — at both the Java and native layers.
 
-[Read Documentation](#introduction)
+[Read the Docs](#introduction)
 

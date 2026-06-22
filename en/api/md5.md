@@ -1,6 +1,6 @@
 # crypto
 
-String encryption and decryption utilities.
+Encrypt, decrypt, and hash strings and byte arrays (AES, DES, RC4, MD5, SHA-1, SHA-256).
 
 ## crypto.encrypt(key,data,enctype,transformation)
 
